@@ -1,0 +1,6 @@
+User-agent: Baiduspider
+Disallow:
+User-agent: *
+Disallow:
+Disallow: /bin/
+Sitemap: https://www.fastice-tech.com/sitemap.xml
