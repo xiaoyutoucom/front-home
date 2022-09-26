@@ -1,10 +1,10 @@
 <template>
-    <div id="app" style="background-color:#c8000a ;">
-        <div class="header">
+    <div id="app" style="background-color:#232323 ;">
+        <div class="header" >
             <div class="logo_img" @click="logoClick" >
                 <div style="display:flex; align-items: center; float:left; height: 65px;">
                     <div class="header-logo">
-                        <!-- <img id="header-img" src="../assets/logo1.png" > -->
+                        <img id="header-img" src="../assets/logo1.png" >
                     </div>
                 </div>
 <!--                <div style="display:flex; float:left; height: 65px;">
@@ -17,9 +17,9 @@
             <div id="menu_index" >
                 <!-- web端菜单导航 -->
                 <el-menu v-if="seen" :default-active="activeIndex" class="el-menu-demo" menu-trigger="click" text-color="rgb(209, 209, 209)" style="height: 65px; border:0;margin-left: 20%;" mode="horizontal" @select="handleSelect">
-                    <el-menu-item index="1" class="header-title">首页</el-menu-item>
-					 <el-menu-item index="2" class="header-title">关于我们</el-menu-item>
-					  <el-menu-item index="3" class="header-title">企业业务</el-menu-item>
+                    <el-menu-item index="1" id="首页" class="header-title">首页</el-menu-item>
+					 <el-menu-item index="2" ref="关于我们" class="header-title">关于我们</el-menu-item>
+					  <el-menu-item index="3" ref="企业业务" class="header-title">企业业务</el-menu-item>
                     <!-- <el-submenu index="2">
                         <template slot="title">关于我们</template>
                         <el-menu-item index="xx">公司介绍</el-menu-item>
@@ -38,16 +38,16 @@
 						<el-menu-item index="xx1">建筑漫游&VR</el-menu-item>
 						<el-menu-item index="xx1">动画</el-menu-item>
 					</el-submenu> -->
-                    <el-menu-item index="About" class="header-title">联系我们</el-menu-item>
+                    <el-menu-item index="5"  class="header-title">联系我们</el-menu-item>
                 </el-menu>
                 <!-- 手机端菜单导航 v-bind:style="{backgroundColor:'#409EFF'}" -->
-                <el-menu v-if="!seen" :default-active="activeIndex" class="el-menu-demo" menu-trigger="click" text-color="rgb(153, 153, 153)" style="height: 65px; border:0;" mode="horizontal" @select="handleSelectMobile">
-                    <el-submenu index="1" class="header-title mobile_menu">
-                        <template slot="title">{{currentMenu}}</template>
+                <el-menu v-if="!seen" :default-active="activeIndex" class="el-menu-demo" menu-trigger="click" text-color="rgb(209, 209, 209)" style="height: 65px; border:0;" mode="horizontal" @select="handleSelectMobile">
+                    <el-submenu index="1" class="header-title">
+                        <template slot="title"><div style="color:rgb(209, 209, 209);">{{currentMenu}}</div></template>
                         <el-menu-item index="1" class="header-title">首页</el-menu-item>
-                        <el-menu-item index="3" class="header-title">关于我们</el-menu-item>
-                        <el-menu-item index="4" class="header-title">企业业务</el-menu-item>
-                        <el-menu-item index="About" class="header-title">联系我们</el-menu-item>
+                        <el-menu-item index="2" class="header-title">关于我们</el-menu-item>
+                        <el-menu-item index="3" class="header-title">企业业务</el-menu-item>
+                        <el-menu-item index="5" class="header-title">联系我们</el-menu-item>
                     </el-submenu>
                 </el-menu>
             </div>
@@ -56,7 +56,7 @@
                 <el-button type="primary" class="header-title" @click="register" round>注册</el-button>
             </div> -->
         </div>
-        <div class="container" style="background-color:#FFFFFF;clear: both;">
+        <div class="container" style="background-color:#FFFFFF;clear: both;padding-top:4.85%">
             <router-view></router-view>
         </div>
 
@@ -64,23 +64,17 @@
             <div style="height:1px;padding:0;background-color:#999;">
             </div>
         </div>
-        <div style="width: 90%;margin: 20px auto;color: rgb(153, 153, 153);">
-            <el-row :gutter="20">
-				<el-col :xs="24" :sm="12">
-				    <div><img :src="company.qrcode" style="width: 100px;height: 100px;border: 0"/></div>
-				    <div class="footer_font">关注大幕影业</div>
-				</el-col>
-                <el-col :xs="24" :sm="12">
-                    <p class="footer_font">邮箱：jb_technology@163.com</p>
-                    <div style="margin: auto;" class="footer_font">
+        <div style="width: 90%;margin: 20px auto;color: white;text-align: center; height: 5rem;">
+          
+                    <div>
                         互联网ICP备案：鄂ICP备19029919号-1
                     </div>
-                    <div style="margin: auto;" class="footer_font">
+                    <div>
                         ©fastice-tech.com 大幕影业
                     </div>
                 </el-col>
 
-            </el-row>
+
         </div>
         <div id="back_to_top" ref="btn" @click="backTop" style="display: none;">
             <p style="font-size: 0.625em; font-weight: bold;color: red;">TOP▲</p>
@@ -113,59 +107,41 @@
                     case 'About':
                         this.$router.push({name: "About"});
                         break;
-                    case '3':
+                    case '2':
                         this.$router.push({name: "Fashion"});
                         break;
-					case '4':
-					    this.$router.push({name: "Fashion"});
+					case '3':
+					    this.$router.push({name: "Com"});
 					    break;
-                    // case '3':
-                    //     this.$router.push({name: "Index"});
-                    //     window.location.hash = "#产品特点";
-                    //     break;
-                    // case '4':
-                    //     this.$router.push({name: "Index"});
-                    //     window.location.hash = "#合作伙伴";
-                    //     break;
-                    // case '5':
-                    //     this.$router.push({name: "Index"});
-                    //     window.location.hash = "#关于我们";
-                    //     break;
+                    case '5':
+                        this.$router.push({name: "Index"});
+                        
+						setTimeout(() =>{
+						   window.location.hash = "#联系我们";
+						},100);
+                        break;
                 }
             },
             handleSelectMobile(key) {
                 switch (key){
-                    case '1':
-                        this.$router.push({name: "Index"});
-                        this.currentMenu='首页';
-                        break;
-                    case '2-1':
-                        this.$router.push({name: "Index"});
-                        window.location.hash = "#产品微观";
-                        this.currentMenu='首页';
-                        break;
-                    case '2-2':
-                        this.$router.push({name: "Fruit"});
-                        this.currentMenu='生鲜果蔬';
-                        break;
-                    case '2-3':
-                        this.$router.push({name: "Fashion"});
-                        break;
-                    case '3':
-                        this.$router.push({name: "Index"});
-                        window.location.hash = "#产品特点";
-                        this.currentMenu='首页';
-                        break;
-                    case '4':
-                        this.$router.push({name: "Index"});
-                        window.location.hash = "#合作伙伴";
-                        this.currentMenu='首页';
-                        break;
-                    case '5':
-                        this.$router.push({name: "Index"});
-                        window.location.hash = "#关于我们";
-                        this.currentMenu='首页';
-                        break;
+					case '1':
+					    this.$router.push({name: "Index"});
+					    break;
+					case 'About':
+					    this.$router.push({name: "About"});
+					    break;
+					case '2':
+					    this.$router.push({name: "Fashion"});
+					    break;
+					case '3':
+					    this.$router.push({name: "Com"});
+					    break;
+					case '5':
+					    this.$router.push({name: "Index"});
+					    setTimeout(() =>{
+					       window.location.hash = "#联系我们";
+					    },100);
+					    break;
                 }
             },
             handleScroll(){
@@ -240,9 +216,10 @@
     }
     .header{
         margin: auto;
-        width: 90%;
-        height: 65px;
-        /*background: #F56C6C;*/
+        width: 100%;
+        height: 70px;
+        background: #c8000a;
+		position:fixed;top:0;z-index:999;
     }
     @media screen and (max-device-width: 415px) {
         .logo_img{
@@ -301,6 +278,7 @@
 	.el-menu--horizontal>.el-submenu.is-active .el-submenu__title{
 		background-color: rgb(255, 57, 57) !important;
 	}
+
 	
 	.el-menu--horizontal>.el-menu-item.is-active{
 		color: #FFF !important;

@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Index from '../components/Index'
 import About from '../components/About'
 import Fashion from '../components/Fashion'
-
+import Com from '../components/Com'
 Vue.use(Router)
 
 export default new Router({
@@ -22,6 +22,12 @@ export default new Router({
             path: '/fashion',
             name: 'Fashion',
             component: Fashion
-        },
+        }
+		,
+        {
+            path: '/com',
+            name: 'Com',
+            component: Com
+        }
     ]
 })

@@ -1,13 +1,15 @@
 <template  id="card-template">
-  <div style="background-color: #fff;">
-	  <div style="padding: 2% 10% 2% 10%;">
+  <div :style ='{backgroundImage: "url("+ redimg+")"}' style="width: 100%;height: 100%;">
+	  <div style="padding: 2% 10% 2% 10%;color: #EBEEF5;">
 		  <div id="企业业务" class="product_spec_title head-label">
 		      <div style="text-align: left;" class="font_size_24">
 		         <span style="font-size:40px;color:#FF3939;"><strong>L</strong></span> 联系方式
 		      </div>
 		  </div>
 		  <div style="padding: 2% 5% 2% 5%;">
-		  <img style="width: 50rem;" id="header-img" src="../assets/dt.jpg" >
+		  <img style="width: 50rem;margin-bottom: 3%;" id="header-img" src="../assets/dt.jpg" >
+		  <div style="padding: 2% 5% 2% 5%; border-top: 1px #e79992 solid;
+  border-bottom: 1px #e79992 solid;width: 50%;">
 		  <el-row :gutter="20">
 		    <el-col :span="6"><div class="grid-content bg-purple">地址：</div></el-col>
 			<el-col :span="6"><div class="grid-content bg-purple">************************</div></el-col>
@@ -25,6 +27,7 @@
 		  			<el-col :span="6"><div class="grid-content bg-purple">************************</div></el-col>
 		  </el-row>
 		  </div>
+		  </div>
 	  </div>
   </div>
     <!--<div>水果</div>-->
@@ -32,10 +35,19 @@
   </div>
 </template>
 <script>
+	import cardComponent from './Card.vue'
+	import qimg from '../../static/slider/q1.jpg'
+	import redimg from '../../static/slider/red.jpg'
+	import bbimg from '../../static/slider/bb.jpg'
+	import rimg from '../../static/slider/r.jpg'
     export default {
         name: 'Fruit',
         data () {
             return {
+				qimg: qimg,
+				redimg: redimg,
+				bbimg:bbimg,
+				rimg:rimg,
                delivery:[
                    {
                        img: require('../assets/other/定位图标.png'),
