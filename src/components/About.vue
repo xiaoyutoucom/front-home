@@ -49,19 +49,19 @@
 				bbimg:bbimg,
 				rimg:rimg,
                delivery:[
-                   {
-                       img: require('../assets/other/定位图标.png'),
-                       title: "自定义配送范围",
-                       contents:["商家后台自定义配送范围"]
-                   },{
-                       img: require('../assets/other/骑车送.png'),
-                       title: "支持自定义配送",
-                       contents:["商家自己优选配送路径"]
-                   },{
-                       img: require('../assets/other/券.png'),
-                       title: "线上优惠券福利",
-                       contents:["各种优惠福利提升用户消费"]
-                   }
+                   // {
+                   //     img: require('../assets/other/定位图标.png'),
+                   //     title: "自定义配送范围",
+                   //     contents:["商家后台自定义配送范围"]
+                   // },{
+                   //     img: require('../assets/other/骑车送.png'),
+                   //     title: "支持自定义配送",
+                   //     contents:["商家自己优选配送路径"]
+                   // },{
+                   //     img: require('../assets/other/券.png'),
+                   //     title: "线上优惠券福利",
+                   //     contents:["各种优惠福利提升用户消费"]
+                   // }
                ]
             }
         }

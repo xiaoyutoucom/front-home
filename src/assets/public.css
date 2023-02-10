@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+img {
+  border: none;
+}
+input,
+select,
+textarea {
+  outline: none;
+  border: none;
+  background: none;
+}
+textarea {
+  resize: none;
+}
+a {
+  text-decoration: none;
+}
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+footer,
+header,
+nav {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+fieldset,
+img {
+  border: none;
+}
+img {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+i,
+em {
+  font-style: normal;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+ul,
+ol {
+  list-style: none;
+}
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "SimSun", "宋体";
+}
+input::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+select,
+input {
+  vertical-align: middle;
+}
+select,
+input,
+textarea {
+  font-size: 12px;
+  margin: 0;
+}
+input[type="text"],
+input[type="password"],
+textarea {
+  outline-style: none;
+  -webkit-appearance: none;
+}
+textarea {
+  resize: none;
+}
+input,
+textarea {
+  background: none;
+  border: none;
+}
+table {
+  border-collapse: collapse;
+}
+body {
+/*  color: #333; */
+color: rgb(255, 255, 255);
+    font-family: 微软雅黑;
+  font: 12px "SimSun", "宋体", "Arial Narrow", HELVETICA;
+  background: #fff;
+}
+a {
+/*  color: #666; */
+  text-decoration: none;
+}
+a,
+label {
+  blr: expression(this.onFocus=this.blur());
+}
+a,
+label {
+  outline: none;
+}
+.pcshow {
+  display: block !important;
+}
+.moshow {
+  display: none !important;
+}
+.ovh {
+  overflow: hidden;
+  display: block;
+}
+.w100,
+img {
+  width: 100%;
+  height: auto;
+}
+.main {
+  width: 100%;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  width: 83.33%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+img {
+  border: none;
+}
+input,
+select,
+textarea {
+  outline: none;
+  border: none;
+  background: none;
+}
+textarea {
+  resize: none;
+}
+a {
+  text-decoration: none;
+}

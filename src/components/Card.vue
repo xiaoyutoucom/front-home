@@ -12,7 +12,7 @@
     </el-row>
     
     <!-- 分页 -->
-    <!-- <div class="blockPage">
+    <div class="blockPage">
       <el-pagination
         @size-change="sizeChange"
         @current-change="currentChange"
@@ -23,7 +23,7 @@
         layout="total, sizes, prev, pager, next, jumper"
         :total="page.total">
       </el-pagination>
-    </div> -->
+    </div>
   </basic-container>
 </template>
 <style>
