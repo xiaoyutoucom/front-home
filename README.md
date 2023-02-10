@@ -1,10 +1,10 @@
 # fastice-tech
 
 #### Description
-坚冰官网
+影业前端界面
 
 #### 在线演示
-https://www.fastice-tech.com
+http://www.damumovie.com
 
 ## Project setup
 ```
@@ -31,12 +31,7 @@ npm run test
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 
 ### web端图片
-![web端](https://gitee.com/xudaile/fastice-tech/raw/master/static/other/web.jpg)
 
-### mobile端图片
-![mobile端](https://gitee.com/xudaile/fastice-tech/raw/master/static/other/mobile.jpg)
+![输入图片说明](image.png)
